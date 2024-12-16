@@ -6,9 +6,8 @@ use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class,'home']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -26,6 +25,4 @@ require __DIR__.'/auth.php';
 route::get('admin/dashboard',[HomeController::class,'index'])->
    middleware(['auth','admin']);
 
-   Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'create'])->name('login');
    
-   Route::post('/upload-photo', [UserController::class, 'store'])->name('upload.photo');

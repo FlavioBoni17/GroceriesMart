@@ -58,7 +58,6 @@
 <body>
     <div class="container">
         <div class="register-card">
-            <img src="https://via.placeholder.com/100" alt="User Icon">
             <h1>Register</h1>
             <form method="POST" action="{{ route('register') }}">
                 @csrf
@@ -68,10 +67,11 @@
                 <input type="text" name="address" class="form-input" placeholder="Address" required>
                 <input type="password" name="password" class="form-input" placeholder="Password" required>
                 <input type="password" name="password_confirmation" class="form-input" placeholder="Confirm Password" required>
-                <input type="file" name="photo" class="form-input" accept="image/*">
                 <button type="submit" class="form-button">Register</button>
             </form>
         </div>
     </div>
 </body>
 </html>
+
+

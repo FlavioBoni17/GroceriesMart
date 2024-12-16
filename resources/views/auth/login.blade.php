@@ -58,7 +58,6 @@
 <body>
     <div class="container">
         <div class="login-card">
-            <h1>Gorceries Mart</h1>
             <h1>Login</h1>
             <form method="POST" action="{{ route('login') }}">
                 @csrf
